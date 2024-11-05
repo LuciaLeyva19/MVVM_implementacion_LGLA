@@ -14,6 +14,7 @@ namespace MVVM_implementacion_LGLA.VistaModelo
         string _N1;
         string _N2;
         string _R;
+        string _TipoUsuario;
 
         #endregion
         #region CONSTRUCTOR
@@ -25,6 +26,20 @@ namespace MVVM_implementacion_LGLA.VistaModelo
 
         #endregion
         #region OBJETOS
+        public string TipoUsuario
+        {
+            get { return _TipoUsuario; }
+            set { SetValue(ref _TipoUsuario, value); }
+        }
+        public string SeleccionarTipoUsuario
+        {
+            get { return _TipoUsuario; }
+            set
+            {
+                SetProperty(ref _TipoUsuario, value);
+                TipoUsuario = _TipoUsuario;
+            }
+        }
         public string N1
         {
             get { return _N1; }
