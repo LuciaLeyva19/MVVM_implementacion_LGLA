@@ -52,6 +52,14 @@
                    FontAttributes="Bold"
                    FontSize="35"
                 />
+            <Button Text="Ir a pagina 2"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Background="white"
+                    FontAttributes="Bold"
+                    CornerRadius="5"
+                    Command="{Binding Navegarcommandpage2}"
+                    TextColor="Black"></Button>
             <StackLayout HorizontalOptions="Center"
                          Orientation="Horizontal">
                 <Label TextColor="White"

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVVM_implementacion_LGLA.Vista;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
@@ -57,12 +58,6 @@ namespace MVVM_implementacion_LGLA.VistaModelo
         }
         #endregion
         #region PROCESOS
-        public async Task Procesoasync()
-        {
-          
-
-        
-        }
         public void Sumar()
         {
             double n1 = 0;
@@ -76,11 +71,17 @@ namespace MVVM_implementacion_LGLA.VistaModelo
             r = n1 + n2;
             R = r.ToString();
         }
+
+        public async Task NavegarPagina2()
+        {
+            await Navigation.PushAsync(new Page2());
+        }
         #endregion
 
         #region COMANDOS
-        public ICommand Alertacommand => new Command(async () => await Procesoasync());
+        public ICommand Navegarcommandpage2 => new Command(async () => await NavegarPagina2());
         public ICommand Suymarcommand => new Command(Sumar);
+        
         #endregion
     }
 }
