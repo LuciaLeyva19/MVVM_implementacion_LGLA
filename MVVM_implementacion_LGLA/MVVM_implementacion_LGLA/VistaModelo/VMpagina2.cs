@@ -52,10 +52,15 @@ namespace MVVM_implementacion_LGLA.VistaModelo
         {
 
         }
+        public async Task Alerta (Musuarios parametros)
+        {
+            await DisplayAlert("Titulo", parametros.Nombre, "Ok");
+        }
         #endregion
         #region COMANDOS
         public ICommand Volvercommand => new Command (async () => await ProcesoAsyncrono());
         //public Icommand ProcesoSimpcommand => new command (procesoSimple);
+        public ICommand Alertacommand => new Command<Musuarios>(async (p) => await Alerta(p));
         #endregion
 
     }
