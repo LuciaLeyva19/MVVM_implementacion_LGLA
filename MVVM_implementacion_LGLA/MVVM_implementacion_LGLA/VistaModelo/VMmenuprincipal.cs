@@ -13,21 +13,21 @@ namespace MVVM_implementacion_LGLA.VistaModelo
     {
         #region VARIABLES
         string _Texto;
-        public List<Mmenuprincipal> listausuarios { get; set; }
+        public List<Mmenuprincipal> listapaginas { get; set; }
         #endregion
         #region CONSTRUCTOR 
         public VMmenuprincipal(INavigation navigation)
         {
             Navigation = navigation;
-            Mostrarusuarios();
+            MostrarPaginas();
         }
 
         #endregion
 
         #region OBJETOS
-        public void Mostrarusuarios()
+        public void MostrarPaginas()
         {
-            listausuarios = new List<Mmenuprincipal>
+            listapaginas = new List<Mmenuprincipal>
             {
                 new Mmenuprincipal
                 {
