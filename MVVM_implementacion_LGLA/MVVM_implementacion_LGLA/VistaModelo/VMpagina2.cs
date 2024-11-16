@@ -48,9 +48,9 @@ namespace MVVM_implementacion_LGLA.VistaModelo
         }
         #endregion
         #region PROCESOS
-        public async Task ProcesoAsyncrono()
+        public async Task Volver()
         {
-
+            await Navigation.PopAsync();
         }
         public async Task Alerta (Musuarios parametros)
         {
@@ -58,7 +58,7 @@ namespace MVVM_implementacion_LGLA.VistaModelo
         }
         #endregion
         #region COMANDOS
-        public ICommand Volvercommand => new Command (async () => await ProcesoAsyncrono());
+        public ICommand Volvercommand => new Command (async () => await Volver());
         //public Icommand ProcesoSimpcommand => new command (procesoSimple);
         public ICommand Alertacommand => new Command<Musuarios>(async (p) => await Alerta(p));
         #endregion

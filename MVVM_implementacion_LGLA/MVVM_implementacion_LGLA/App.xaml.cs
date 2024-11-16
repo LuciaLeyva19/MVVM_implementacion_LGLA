@@ -11,7 +11,7 @@ namespace MVVM_implementacion_LGLA
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MenuPrincipal());
+            MainPage = new NavigationPage(new Page1());
         }
 
         protected override void OnStart()
